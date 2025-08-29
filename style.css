@@ -1,7 +1,7 @@
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-p{
+p,body{
     margin:0;
 }
 #contain{
@@ -11,13 +11,19 @@ p{
     "pro ann"
     "pro tre" ;
 }
-#projects{
-    grid-area: pro;
-}
 #announcments{
+    display:grid;
+    grid-template-rows: 20px repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
     grid-area: ann;
 }
 #trend{
+    display:grid;
+    grid-template-rows: 20px repeat(4,1fr);
+    gap: 10px;
+    padding: 10px;
+    grid-area: ann;
     grid-area: tre;
 }
 #main{
@@ -30,9 +36,11 @@ p{
     height:100vh;
 }
 #projects{
+    grid-area: pro;
     display: grid;
     gap:10px;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-rows: 20px;
     padding: 10px;
 }
 #head{
@@ -62,4 +70,10 @@ border:black 2px solid;
 }
 #name{
     margin-left: 60%;
+}
+#sumtext{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: left;
+    height: fit-content;
 }
