@@ -1,21 +1,65 @@
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+p{
+    margin:0;
+}
+#contain{
+    display: grid;
+    grid-template: 1.5fr 1fr / 3fr 1fr;
+    grid-template-areas:
+    "pro ann"
+    "pro tre" ;
+}
+#projects{
+    grid-area: pro;
+}
+#announcments{
+    grid-area: ann;
+}
+#trend{
+    grid-area: tre;
+}
 #main{
     display: grid;
-    grid-template: 1fr 3fr/ 1fr 3fr;
+    grid-template: 1fr 3fr/ 1fr 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar container";
     width:100vw;
     height:100vh;
 }
-#side,#head,#contain{
+#projects{
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    padding: 10px;
+}
+#head{
+    display:grid;
+    grid-template: 1.5fr 1fr/ 1.5fr 1fr;
+}
+#side,#head,#projects,#announcements,#trend,#pro{
 border:black 2px solid;
 }
 #side{
     grid-area: sidebar;
+    min-width: 120px;
 }
 #head{
     grid-area: header;
 }
 #contain{
     grid-area: container;
+}
+#search{
+    background-color: grey;
+    border-radius: 10px;
+    height:20px;
+    display:grid;
+    align-self: center;
+    margin-bottom: 30px;
+}
+#name{
+    margin-left: 60%;
 }
