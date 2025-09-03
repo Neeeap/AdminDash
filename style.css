@@ -7,9 +7,9 @@ p,body{
 h3{
     margin-bottom: 0;
 }
-h3{
+#sidetext{
     margin-top: 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #contain{
     display: grid;
@@ -78,7 +78,7 @@ border-radius: 10px;
 #contain{
     grid-area: container;
 }
-#search{
+#bar{
     background-color: lightgray;
     border-radius: 10px;
     height:20px;
@@ -123,9 +123,12 @@ img{
     height:auto;
     border-radius: 20px;
 }
-#bell{
+#bell,#mag,#sideicon{
     width:30px;
     height:auto;
+}
+#mag{
+    margin-top: 10px;
 }
 #intro{
     display: grid;
@@ -135,4 +138,12 @@ img{
 }
 #bigname{
     font-size: 30px;
+}
+#search{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+#sidetab{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
