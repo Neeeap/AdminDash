@@ -5,7 +5,11 @@ p,body{
     margin:0;
 }
 h3{
+    margin-bottom: 0;
+}
+h3{
     margin-top: 0;
+    margin-top: 20px;
 }
 #contain{
     display: grid;
@@ -54,7 +58,7 @@ h3{
 }
 #head{
     display:grid;
-    grid-template: 1.5fr 1fr/ 1.5fr 1fr;
+    grid-template: 1fr 1fr/ 1fr 1fr;
     gap:10px;
     padding:10px;
 }
@@ -69,12 +73,13 @@ border-radius: 10px;
 }
 #head{
     grid-area: header;
+    box-shadow: 0 4px 1px gray;
 }
 #contain{
     grid-area: container;
 }
 #search{
-    background-color: grey;
+    background-color: lightgray;
     border-radius: 10px;
     height:20px;
     display:grid;
@@ -82,11 +87,52 @@ border-radius: 10px;
     margin-bottom: 30px;
 }
 #name{
-    margin-left: 60%;
+    display: grid;
+    width:200px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    margin-top: 10px;
+    height:70px
 }
 #sumtext{
     grid-column-start: 1;
     grid-column-end: -1;
     text-align: left;
     height: fit-content;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:300px;
+    justify-self: center;
+}
+button{
+    width:70px;
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    background-color: beige;
+}
+img{
+    width:60px;
+    height:auto;
+    border-radius: 30px;
+}
+#pfp{
+    width:40px;
+    height:auto;
+    border-radius: 20px;
+}
+#bell{
+    width:30px;
+    height:auto;
+}
+#intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:200px;
+    margin-left:50px;
+}
+#bigname{
+    font-size: 30px;
 }
